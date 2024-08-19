@@ -1,0 +1,50 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+  # name: csi-interfusion
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+    
+- task: DotNetCoreCLI@2
+  displayName: DotNet Build
+  inputs:
+    command: 'build'
+    projects: 'src/**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  displayName: DotNet Publish
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    zipAfterPublish: true
+    arguments: '-o $(Build.ArtifactStagingDirectory)'
+    
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+- task: MSBuild@1
+  displayName: Build Sql Project
+  inputs:
+    solution: 'src/BCS.Database/BCS.Database.sqlproj'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: 'src/BCS.Database/bin/Debug/BCS.Database.dacpac' 
+    artifactName: 'DacpacFiles'
+
+
