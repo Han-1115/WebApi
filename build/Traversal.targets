@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+
+  <PropertyGroup>
+    <BuildInParallel Condition="'$(BuildInParallel)' == ''">true</BuildInParallel>
+  </PropertyGroup>
+
+  <Target Name="BuildAllProjects">
+    <MSBuild Targets="Build" Projects="@(Project)" Condition="'$(SerializeProjects)'=='true'" Properties="Dummy=%(Identity)"/>
+    <MSBuild Targets="Build" Projects="@(Project)" Condition="'$(SerializeProjects)'!='true'" BuildInParallel="$(BuildInParallel)" />
+  </Target>
+
+  <Target Name="CleanAllProjects">
+    <MSBuild Targets="Clean" Projects="@(Project)" Condition="'$(SerializeProjects)'=='true'" Properties="Dummy=%(Identity)"/>
+    <MSBuild Targets="Clean" Projects="@(Project)" Condition="'$(SerializeProjects)'!='true'" BuildInParallel="$(BuildInParallel)" />
+  </Target>
+
+  <Target Name="TestAllProjects">
+    <MSBuild Targets="Test" Projects="@(Project)" BuildInParallel="false" />
+  </Target>
+
+  <Target Name="PublishAllProjects">
+    <MSBuild Targets="Publish" Projects="@(Project)" BuildInParallel="false" />
+  </Target>
+
+  <Target Name="PackAllProjects">
+    <MSBuild Targets="Pack" Projects="@(PackProject)" BuildInParallel="false" />
+  </Target>
+
+  <Target Name="RestoreAllProjects">
+    <MSBuild Targets="Restore" Projects="@(Project)" BuildInParallel="false" />
+  </Target>
+
+  <PropertyGroup>
+    <TraversalBuildDependsOn>BuildAllProjects;$(TraversalBuildDependsOn)</TraversalBuildDependsOn>
+    <TraversalCleanDependsOn>CleanAllProjects;$(TraversalCleanDependsOn)</TraversalCleanDependsOn>
+    <TraversalTestDependsOn>TestAllProjects;$(TraversalTestDependsOn)</TraversalTestDependsOn>
+    <TraversalPublishDependsOn>PublishAllProjects;$(TraversalPublishDependsOn)</TraversalPublishDependsOn>
+    <TraversalPackDependsOn>PackAllProjects;$(TraversalPackDependsOn)</TraversalPackDependsOn>
+    <TraversalRestoreDependsOn>RestoreAllProjects;$(TraversalRestoreDependsOn)</TraversalRestoreDependsOn>
+  </PropertyGroup>
+
+  <Target Name="Build" DependsOnTargets="$(TraversalBuildDependsOn)" />
+
+  <Target Name="Clean" DependsOnTargets="$(TraversalCleanDependsOn)" />
+
+  <Target Name="Test" DependsOnTargets="$(TraversalTestDependsOn)" />
+
+  <Target Name="Publish" DependsOnTargets="$(TraversalPublishDependsOn)" />
+
+  <Target Name="Pack" DependsOnTargets="$(TraversalPackDependsOn)" />
+
+  <Target Name="Restore" DependsOnTargets="$(TraversalRestoreDependsOn)" />
+
+  <Target Name="BuildAndTest" DependsOnTargets="Build;Test" />
+
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+
+  <Target Name="RebuildAndTest" DependsOnTargets="Rebuild;Test" />
+
+  <Target Name="BuildAndPack" DependsOnTargets="Build;Pack" />
+
+</Project>

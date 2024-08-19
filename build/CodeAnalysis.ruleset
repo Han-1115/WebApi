@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Rules for StyleCop.Analyzers" Description="Global rules" ToolsVersion="10.0">
+
+  <IncludeAll Action="Warning" />
+
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="CS3001" Action="None" />
+    <Rule Id="CS3002" Action="None" />
+    <Rule Id="CS3003" Action="None" />
+    <Rule Id="CS3009" Action="None" />
+    <Rule Id="CS3024" Action="None" />
+  </Rules>
+
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <Rule Id="SA0001" Action="None" />
+    <Rule Id="SA1101" Action="None" />
+    <Rule Id="SA1309" Action="None" />
+    <Rule Id="SA1310" Action="None" />
+    <Rule Id="SA1413" Action="None" />
+    <Rule Id="SA1503" Action="None" />
+    <Rule Id="SA1600" Action="None" />
+    <Rule Id="SA1601" Action="None" />
+    <Rule Id="SA1602" Action="None" />
+    <Rule Id="SA1615" Action="None" />
+    <Rule Id="SA1633" Action="None" />
+  </Rules>
+
+  <Rules AnalyzerId="SonarAnalyzer.CSharp" RuleNamespace="SonarAnalyzer.CSharp">
+    <Rule Id="S101" Action="None" />
+    <Rule Id="S125" Action="None" />
+    <Rule Id="S2342" Action="None" />
+    <Rule Id="S3242" Action="None" />
+    <Rule Id="S3220" Action="None" />
+    <Rule Id="S2372" Action="None" />
+    <Rule Id="S3246" Action="None" />
+    <Rule Id="S1144" Action="Warning" />
+    <Rule Id="S1481" Action="Warning" />
+    <Rule Id="S1450" Action="Warning" />
+    <Rule Id="S1118" Action="Warning" />
+    <Rule Id="S1121" Action="Warning" />
+    <Rule Id="S2328" Action="Warning" />
+    <Rule Id="S2234" Action="Warning" />
+    <Rule Id="S1186" Action="Warning" />
+    <Rule Id="S2933" Action="Warning" />
+    <Rule Id="S3442" Action="Warning" />
+    <Rule Id="S2386" Action="Warning" />
+    <Rule Id="S2387" Action="Warning" />
+  </Rules>
+
+</RuleSet>
