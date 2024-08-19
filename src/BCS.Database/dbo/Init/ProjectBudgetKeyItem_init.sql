@@ -1,0 +1,25 @@
+﻿--INSERT INTO [dbo].[ProjectBudgetKeyItem]
+--           ([KeyItemID]
+--           ,[KeyItemOrder]
+--           ,[KeyItemEn]
+--           ,[KeyItemCn]
+--           ,[EnableProportionOfProjectAmount]
+--           ,[EnableDepartmentMetric]
+--           ,[Remark]
+--           ,[CreateID]
+--           ,[Creator]
+--           ,[CreateDate]
+--           ,[ModifyID]
+--           ,[Modifier]
+--           ,[ModifyDate])
+--     VALUES
+--           (1001,1001,'Income from Own Delivery','自有交付收入',1,0,'',-1,'admin',GETDATE(),-1,'admin',GETDATE()),
+--           (1002,1002,'Subcontracting Income (Excluding Tax)','分包收入(不含税)',1,0,'',-1,'admin',GETDATE(),-1,'admin',GETDATE()),
+--           (1003,1003,'Own Delivery HR Cost','自有交付人力成本',1,1,'',-1,'admin',GETDATE(),-1,'admin',GETDATE()),
+--           (1004,1004,'Subcontracting Cost','分包成本(不含税)',1,0,'',-1,'admin',GETDATE(),-1,'admin',GETDATE()),
+--           (1005,1005,'Other Project Costs','其它成本费用',1,1,'',-1,'admin',GETDATE(),-1,'admin',GETDATE()),
+--           (1006,1006,'Gross Profit from Own Delivery','自有交付毛利',0,0,'',-1,'admin',GETDATE(),-1,'admin',GETDATE()),
+--           (1007,1007,'Gross Profit Margin from Own Delivery (%)','自有交付毛利率',0,0,'',-1,'admin',GETDATE(),-1,'admin',GETDATE()),
+--           (1008,1008,'Project Gross Profit','项目毛利',0,0,'',-1,'admin',GETDATE(),-1,'admin',GETDATE()),
+--           (1009,1009,'Project Gross Profit Margin (%)','项目毛利率',0,1,'',-1,'admin',GETDATE(),-1,'admin',GETDATE());
+--GO

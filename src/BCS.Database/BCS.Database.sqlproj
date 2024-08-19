@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>BCS.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{0659aac8-63f3-43e3-a499-4ac628e93494}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>BCS.Database</RootNamespace>
+    <AssemblyName>BCS.Database</AssemblyName>
+    <ModelCollation>2052,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Chinese_PRC_CI_AS</DefaultCollation>
+    <QueryStoreCaptureMode>Auto</QueryStoreCaptureMode>
+    <QueryStoreDesiredState>Off</QueryStoreDesiredState>
+    <QueryStoreFlushInterval>900</QueryStoreFlushInterval>
+    <QueryStoreStatsInterval>60</QueryStoreStatsInterval>
+    <QueryStoreMaxPlansPerQuery>200</QueryStoreMaxPlansPerQuery>
+    <QueryStoreStaleQueryThreshold>30</QueryStoreStaleQueryThreshold>
+    <QueryStoreMaxStorageSize>1000</QueryStoreMaxStorageSize>
+    <DbScopedConfigLegacyCardinalityEstimation>Off</DbScopedConfigLegacyCardinalityEstimation>
+    <DbScopedConfigMaxDOP>0</DbScopedConfigMaxDOP>
+    <DbScopedConfigParameterSniffing>On</DbScopedConfigParameterSniffing>
+    <DbScopedConfigOptimizerHotfixes>Off</DbScopedConfigOptimizerHotfixes>
+    <DelayedDurability>DISABLED</DelayedDurability>
+    <AutoCreateStatisticsIncremental>False</AutoCreateStatisticsIncremental>
+    <MemoryOptimizedElevateToSnapshot>False</MemoryOptimizedElevateToSnapshot>
+    <Containment>None</Containment>
+    <IsNestedTriggersOn>True</IsNestedTriggersOn>
+    <IsTransformNoiseWordsOn>False</IsTransformNoiseWordsOn>
+    <TwoDigitYearCutoff>2049</TwoDigitYearCutoff>
+    <NonTransactedFileStreamAccess>OFF</NonTransactedFileStreamAccess>
+    <TargetRecoveryTimePeriod>60</TargetRecoveryTimePeriod>
+    <TargetRecoveryTimeUnit>SECONDS</TargetRecoveryTimeUnit>
+    <IsChangeTrackingOn>False</IsChangeTrackingOn>
+    <IsChangeTrackingAutoCleanupOn>True</IsChangeTrackingAutoCleanupOn>
+    <ChangeTrackingRetentionPeriod>2</ChangeTrackingRetentionPeriod>
+    <ChangeTrackingRetentionUnit>Days</ChangeTrackingRetentionUnit>
+    <IsEncryptionOn>False</IsEncryptionOn>
+    <IsBrokerPriorityHonored>False</IsBrokerPriorityHonored>
+    <Trustworthy>False</Trustworthy>
+    <AutoUpdateStatisticsAsynchronously>False</AutoUpdateStatisticsAsynchronously>
+    <PageVerify>CHECKSUM</PageVerify>
+    <ServiceBrokerOption>DisableBroker</ServiceBrokerOption>
+    <DateCorrelationOptimizationOn>False</DateCorrelationOptimizationOn>
+    <Parameterization>SIMPLE</Parameterization>
+    <AllowSnapshotIsolation>False</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <VardecimalStorageFormatOn>True</VardecimalStorageFormatOn>
+    <SupplementalLoggingOn>False</SupplementalLoggingOn>
+    <CompatibilityMode>150</CompatibilityMode>
+    <AnsiNullDefault>True</AnsiNullDefault>
+    <AnsiNulls>True</AnsiNulls>
+    <AnsiPadding>True</AnsiPadding>
+    <AnsiWarnings>True</AnsiWarnings>
+    <ArithAbort>True</ArithAbort>
+    <ConcatNullYieldsNull>True</ConcatNullYieldsNull>
+    <QuotedIdentifier>True</QuotedIdentifier>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <DatabaseChaining>False</DatabaseChaining>
+    <DatabaseState>ONLINE</DatabaseState>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <DefaultCursor>LOCAL</DefaultCursor>
+    <AutoClose>False</AutoClose>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <TornPageDetection>False</TornPageDetection>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <Recovery>FULL</Recovery>
+    <EnableFullTextSearch>True</EnableFullTextSearch>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DataRetentionEnabled>False</DataRetentionEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\StoreProcedure" />
+    <Folder Include="dbo\Init" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\ContractAttachments.sql" />
+    <Build Include="dbo\Tables\Contract.sql" />
+    <Build Include="dbo\Tables\ContractHistory.sql" />
+    <Build Include="dbo\Tables\ProjectHistory.sql" />
+    <Build Include="dbo\Tables\Project.sql" />
+    <Build Include="dbo\Tables\ContractProject.sql" />
+    <Build Include="dbo\Tables\FormCollectionObject.sql" />
+    <Build Include="dbo\Tables\ContractProjectHistory.sql" />
+    <Build Include="dbo\Tables\FormDesignOptions.sql" />
+    <Build Include="dbo\Tables\Client.sql" />
+    <Build Include="dbo\Tables\ContractAttachmentsHistory.sql" />
+    <Build Include="dbo\Tables\Sys_Department.sql" />
+    <Build Include="dbo\Tables\Sys_Dictionary.sql" />
+    <Build Include="dbo\Tables\Sys_DictionaryList.sql" />
+    <Build Include="dbo\Tables\Sys_Log.sql" />
+    <Build Include="dbo\Tables\Sys_Menu.sql" />
+    <Build Include="dbo\Tables\Sys_Province.sql" />
+    <Build Include="dbo\Tables\Sys_QuartzLog.sql" />
+    <Build Include="dbo\Tables\Sys_QuartzOptions.sql" />
+    <Build Include="dbo\Tables\Sys_Role.sql" />
+    <Build Include="dbo\Tables\Sys_RoleAuth.sql" />
+    <Build Include="dbo\Tables\Sys_TableColumn.sql" />
+    <Build Include="dbo\Tables\Sys_TableInfo.sql" />
+    <Build Include="dbo\Tables\Sys_User.sql" />
+    <Build Include="dbo\Tables\Sys_UserDepartment.sql" />
+    <Build Include="dbo\Tables\Sys_WorkFlow.sql" />
+    <Build Include="dbo\Tables\Sys_WorkFlowStep.sql" />
+    <Build Include="dbo\Tables\Sys_WorkFlowTable.sql" />
+    <Build Include="dbo\Tables\Sys_WorkFlowTableAuditLog.sql" />
+    <Build Include="dbo\Tables\Sys_WorkFlowTableStep.sql" />
+    <Build Include="Security\dbadmin.sql" />
+    <Build Include="Security\dbadmin_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Security\Permissions.sql" />
+    <Build Include="dbo\Tables\ProjectResourceBudget.sql" />
+    <Build Include="dbo\Tables\ProjectAttachment.sql" />
+    <Build Include="dbo\Tables\ProjectOtherBudget.sql" />
+    <Build Include="dbo\Tables\ProjectPlanInfo.sql" />
+    <Build Include="dbo\Tables\ProjectResourceBudgetHistory.sql" />
+    <Build Include="dbo\Tables\ProjectPlanInfoHistory.sql" />
+    <Build Include="dbo\Tables\ProjectOtherBudgetHistory.sql" />
+    <Build Include="dbo\Tables\ProjectAttachmentHistory.sql" />
+    <Build Include="dbo\Tables\Staff.sql" />
+    <Build Include="dbo\Init\ProjectBudgetKeyItem_init.sql" />
+    <Build Include="dbo\Tables\ProjectResourceBudgetHC.sql" />
+    <Build Include="dbo\Tables\ProjectResourceBudgetHCHistory.sql" />
+    <Build Include="dbo\Tables\Sys_Calendar.sql" />
+    <Build Include="dbo\StoreProcedure\usp_InitSysCalendar.sql" />
+    <Build Include="dbo\Tables\EmailTemplate.sql" />
+    <Build Include="dbo\Tables\EmailSendLog.sql" />
+    <Build Include="dbo\StoreProcedure\usp_ModifySysCalendar.sql" />
+    <Build Include="dbo\StoreProcedure\usp_SummarySysCalendar.sql" />
+    <Build Include="dbo\Init\init_SystemCalendar.sql" />
+    <Build Include="dbo\Tables\Sys_SalaryMap.sql" />
+    <Build Include="dbo\Tables\Sys_DepartmentSetting.sql" />
+    <Build Include="dbo\Init\init_Sys_TableColumn.sql" />
+    <Build Include="dbo\StoreProcedure\auto_task_usp_UpdateProject.sql" />
+    <Build Include="dbo\Tables\Sys_DepartmentMapping.sql" />
+    <Build Include="dbo\Init\init_Sys_DepartmentMapping.sql">
+      <CopyToOutputDirectory>DoNotCopy</CopyToOutputDirectory>
+    </Build>
+    <Build Include="dbo\Tables\StaffAttendance.sql" />
+    <None Include="dbo\Init\init_Other_Project.sql" />
+    <Build Include="dbo\Tables\SubcontractingContract.sql" />
+    <Build Include="dbo\Tables\SubcontractingContractAttachment.sql" />
+    <Build Include="dbo\Tables\SubcontractingContractPaymentPlan.sql" />
+    <Build Include="dbo\Tables\SubcontractingStaff.sql" />
+    <Build Include="dbo\Tables\SubContractFlow.sql" />
+    <Build Include="dbo\Tables\SubContractFlowPaymentPlan.sql" />
+    <Build Include="dbo\Tables\SubContractFlowAttachment.sql" />
+    <Build Include="dbo\Tables\SubContractFlowStaff.sql" />
+    <Build Include="dbo\Tables\StaffProjectHistory.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\StaffProject.sql" />
+    <Build Include="dbo\StoreProcedure\usp_BackupLatestProject.sql" />
+    <Build Include="dbo\StoreProcedure\usp_RevertProjectToPreviousVersion.sql" />
+    <Build Include="dbo\Tables\ProjectBudgetSummary.sql" />
+    <Build Include="dbo\Tables\ProjectBudgetSummaryHistory.sql" />
+    <Build Include="dbo\Tables\ProjectBudgetKeyItem.sql" />
+  </ItemGroup>
+</Project>
